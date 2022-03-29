@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
-@CrossOrigin("*")
+@CrossOrigin(origins = "*")
 @RestController
 public class UserLoginController {
        @Autowired
@@ -30,10 +30,10 @@ public class UserLoginController {
             }
         }
     @PostMapping("/UserLoginAcc")
-    public boolean loginUser(@RequestBody String userEmail,String userPassword){
+    public boolean loginUser(@RequestBody UserLogin userLogin){
 
         Boolean persist1;
-        persist1 = userLoginInterf.loginUserAcc(userEmail,userPassword);
+        persist1 = userLoginInterf.loginUserAcc(userLogin.getUserEmail(), userLogin.getUserPassword());
         return persist1;
     }
 

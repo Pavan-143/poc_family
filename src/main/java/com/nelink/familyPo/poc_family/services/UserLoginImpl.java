@@ -36,7 +36,7 @@ public class UserLoginImpl implements UserLoginInterf{
 
     @Override
     public Boolean loginUserAcc(String userEmail,String userPassword) {
-       // System.out.println(userLoginRepo.findByUserEmailAndUserPassword(userEmail,userPassword));
+
         List<UserLogin> logindata = userLoginRepo.findByUserEmailAndUserPassword(userEmail,userPassword);
        if(logindata !=null && logindata.size()>0){
            return true;

@@ -1,7 +1,7 @@
 package com.nelink.familyPo.poc_family.Controller;
 
 import com.nelink.familyPo.poc_family.model.FamilyMember;
-import com.nelink.familyPo.poc_family.model.OwnerPoc;
+
 import com.nelink.familyPo.poc_family.services.FamilyMemberInterf;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
